@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const controllers = require('../controllers');
-// const validations = require('../validations');
+const validations = require('../validations');
 
 const basename = path.basename(module.filename);
 const routes = [];
@@ -16,7 +16,7 @@ const routes = [];
 			if (stat.isDirectory()) {
 				load(filePath);
 			} else {
-				const subRoutes = require(filePath)(controllers);
+				const subRoutes = require(filePath)(controllers, validations);
 				subRoutes.forEach(route => routes.push(route));
 			}
 		});
