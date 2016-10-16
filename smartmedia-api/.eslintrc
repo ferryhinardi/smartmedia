@@ -1,0 +1,15 @@
+{
+	"extends": "airbnb",
+  "rules": {
+		"indent": [2, "tab"],
+		"strict": ["off"],
+		"global-require": ["off"],
+		"import/no-dynamic-require": ["off"],
+		"guard-for-in": ["off"],
+		"no-restricted-syntax": ["off"],
+		"no-tabs": ["off"],
+		"new-cap": ["off"],
+		"no-unused-expressions": ["error", { "allowShortCircuit": true }],
+		"no-debugger": ["warn"]
+	}
+}
